@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Nhập vào số: </p>
+    <input type="number" id="so"> <br>
+    <button onclick="kiemtra()">Kiểm tra</button>
+</body>
+<script>
+    let x;
+    let so = document.getElementById("so");
+    function kiemtra(){
+        if (so.value > 2021) {
+    alert("số bạn nhập quá lớn");
+} else if (so.value < 2021) {
+    alert("số bạn nhập quá bé");
+
+} else if(so.value=2021){
+    alert("Bạn đã nhập đúng");
+}
+    }
+    
+       
+</script>
+</html>

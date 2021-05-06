@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let l = 5000000;
+        let x = prompt("Nhập chức vụ");
+        let y = 0;
+        let lcb = 0;
+switch(x){
+    case "giam doc" :
+    y = 10;
+    break;
+    case "truong phong" :
+    y = 6;
+    break;
+    case "nhan vien" :
+    y = 4;
+    break;
+    default:
+        alert("ban da nhap sai");
+
+}
+lcb = l * y;
+document.write("chuc vu: "+ x + " Luong co ban: " + lcb.toLocaleString() + " VND");
+    </script>
+    
+</body>
+</html>

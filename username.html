@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Nhập tài khoản: </p>
+    <label>Tài khoản:</label><br>
+    <input type="text" id="taikhoan"> <br>
+
+    <button onclick="dangnhap()">Đăng nhập</button>
+</body>
+<script>
+    let taikhoan = document.getElementById("taikhoan");
+
+    function dangnhap() {
+        switch (taikhoan.value) {
+            case ('giamdoc'): alert("Xin chào giám đốc");
+                break;
+            case ('nhanvien'): alert("Xin chào nhân viên");
+                break;
+            case (''): alert("tài khoản không hợp lệ");
+                break;
+            default: alert("Tài khoản không hợp lệ");
+        }
+    }
+</script>
+
+</html>
