@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+    <label>Tên:</label><br>
+    <input type="text" id="dongvat"> <br>
+    <button onclick="dich()">Dịch</button>
+</body>
+<script>
+    let dongvat = document.getElementById("dongvat");
+    let xuat="";
+    let arr = [];
+        arr[0] = ["tiger","lion","dog","cat","panda",];
+        arr[1] = ["hổ","sư tử","chó","mèo","gấu trúc"];
+    function dich(){
+        
+       
+            
+            for(let i = 0;i<=4;i++){
+            if(dongvat.value==arr[0][i]){
+                xuat=arr[1][i];
+                break;
+            }else{
+                xuat = "Không tìm thấy";
+            }
+            }
+            document.write(xuat);
+        }
+       
+    
+</script>
+</html>
