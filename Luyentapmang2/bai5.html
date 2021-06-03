@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Chuỗi thứ nhất:</label><br>
+    <input type="text" id="chuoi1"> <br>
+    <label>Chuỗi thứ hai:</label><br>
+    <input type="text" id="chuoi2"> <br>
+    <button onclick="check()">Kiểm tra</button>
+</body>
+<script>
+    c1 = document.getElementById("chuoi1");
+    c2 = document.getElementById("chuoi2");
+    function check(){
+        if(c1.value == c2.value){
+            alert("2 chuỗi trùng nhau");
+        }else{
+            alert("2 chuỗi khác nhau");
+        }
+    }
+</script>
+</html>
