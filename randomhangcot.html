@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><table>
+    <script>
+        let hang = Math.floor(Math.random() * 10) + 1;
+        let cot = Math.floor(Math.random() * 10) + 1;
+            let arr = [];
+            let t = 0;
+        
+            for (let i = 0; i < hang; i++) {
+                document.write("<tr>");
+                arr[i] = [];
+                for (let y = 0; y < cot; y++) {
+                    document.write("<td>");
+                    arr[i][y] = Math.floor(Math.random() * 10) + 1;
+                    document.write(arr[i][y]);
+                    document.write("</td>");
+                    if(arr[i][y] == 6){
+                        t += 1;
+                    }
+                    
+                }
+                document.write("</tr>");
+            }
+            document.write("Số 6 xuất hiện " +t+" lần");
+    </script>
+    </table>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <script>
+            const a = 5;
+            let arr = [];
+            let t = 0;
+            let c = 0, c1 = 0, c2 = 0, c3 = 0, c4 = 0;
+            for (let i = 0; i < a; i++) {
+                document.write("<tr>");
+                arr[i] = [];
+                for (let y = 0; y < a; y++) {
+                    document.write("<td>");
+                    arr[i][y] = Math.floor(Math.random() * 10) + 1;
+                    document.write(arr[i][y]);
+                    document.write("</td>");
+                    t += arr[i][y];
+
+                }
+                document.write("</tr>");
+            }
+            document.write("Tổng mảng: " + t);
+
+
+
+            for (let x = 0; x < a; x++) {
+
+                c += arr[0][x];
+                c1 += arr[1][x];
+                c2 += arr[2][x];
+                c3 += arr[3][x];
+                c4 += arr[4][x];
+            }
+            document.write("<br> Tổng hàng thứ 1 là: " + c);
+            document.write("<br> Tổng hàng thứ 2 là: " + c1);
+            document.write("<br> Tổng hàng thứ 3 là: " + c2);
+            document.write("<br> Tổng hàng thứ 4 là: " + c3);
+            document.write("<br> Tổng hàng thứ 5 là: " + c4);
+
+        </script>
+    </table>
+</body>
+
+</html>

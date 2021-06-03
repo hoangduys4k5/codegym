@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1px solid" style="color: blueviolet;">
+        <script>
+            let cities = [
+                ["HaNoi", "SaiGon", "DaNang"],
+                ["NewYork", "California", "Miami"],
+                ["Tokyo", "Nagoya", "Osaka"]
+            ];
+            
+            for (let i = 0; i < cities.length; i++) {
+                document.write("<tr>");
+                for (let y = 0; y < cities[i].length; y++) {
+                    document.write("<td>");
+                    document.write(cities[i][y]);
+                    document.write("</td>");
+                }
+                document.write("</tr>");
+            }
+            cities[2][0]="BacKinh";
+            document.write("<tr><td>Sau khi đổi</td></tr>");
+            for (let i = 0; i < cities.length; i++) {
+                document.write("<tr>");
+                for (let y = 0; y < cities[i].length; y++) {
+                    document.write("<td>");
+                    document.write(cities[i][y]);
+                    document.write("</td>");
+                }
+                document.write("</tr>");
+            }
+        </script>
+    </table>
+</body>
+
+</html>
