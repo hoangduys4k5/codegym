@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr1 = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"];
+        let arr2 = ["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+        let x = prompt("Nhập tên ngôi sao");
+        function timsao(a){
+            for(let i = 0; i < arr1.length;i++){
+                if(a == arr1[i]){
+                    return arr2[i];
+                }else{
+                    return alert("Không có sao phù hợp");
+                }
+            }
+        }
+        document.write("Thuộc chòm sao: "+timsao(x));
+    </script>
+</body>
+</html>
