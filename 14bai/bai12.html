@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x = prompt("Nhập số thứ nhất: ");
+        let y = prompt("Nhập số thứ hai: ");
+        function doicho(a,b){
+            let t;
+            t = b;
+            b = a;
+            a = t;
+            document.write("Số thứ nhất là: " + a);
+            document.write("<br>Số thứ hai là: " + b);
+        }
+        doicho(x,y);
+    </script>
+</body>
+</html>

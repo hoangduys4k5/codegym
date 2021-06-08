@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x = prompt("Nhập bán kính: ");
+        function dientich(x){
+            return (Math.PI*Math.pow(parseInt(x),2)).toFixed(2); 
+        }
+        function chuvi(x){
+            return (Math.PI*parseInt(x)*2).toFixed(2);
+        }
+        document.write("Diện tích hình tròn: "+ dientich(x));
+        document.write("<br>Chu vi hình tròn: "+chuvi(x));
+    </script>
+</body>
+</html>
