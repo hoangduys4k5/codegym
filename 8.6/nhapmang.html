@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Nhập vào số cần tìm vị trí</label>
+    <input id="index" type="number"/>
+    <button onclick="tim()">Tìm</button>
+    <p id="xuat"></p>
+    <script>
+    
+        
+            let x = prompt("Nhập số phần tử mảng: ");
+            let array = [];
+            function randommang(a){
+                let arr = []
+            for (let i = 0;i < a;i++){    
+                arr.push(Math.floor(Math.random() * 10)+1);
+            }
+            return arr;
+        }
+        array = randommang(x);
+           document.write(array);
+        
+        function getmin(arr){
+            let min = arr[0];
+            for(let i =0; i < arr.length;i++){
+                if(arr[i] < min){
+                    min = arr[i];
+                }
+            }
+            return min;
+
+        }
+        
+        document.write("<br> Số nhỏ nhất là: "+getmin(array));
+      
+
+        function tim(){
+            id = document.getElementById("index");
+            out = document.getElementById("xuat");
+            let dem = 0;
+            for(let i =0; i < array.length;i++){
+                if(array[i] == id.value){
+                    dem = i+1;
+                    break;
+                }else{
+                    dem = "không có số cần tìm";
+                }
+            }
+            out.innerHTML = "Số cần tìm ở vị trí thứ: "+dem;
+            
+        }
+     
+
+        
+    </script>
+</body>
+</html>
