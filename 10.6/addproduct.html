@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let dem=0;
+        function product(id,pro,price){
+            this.id = id;
+            this.pro = pro;
+            this.price = price;
+        }
+        function cart(idcart,total){
+            this.idcart = idcart;
+            this.product2 = [];
+            this.total = total;
+            this.add = function(){
+                product2.push(this.pro);
+                this.total++;
+               
+                
+            }
+        }
+        let proo = new product(1,"chuoi",20000);
+        let cartt =new cart(2,0);
+        cartt.add(proo.pro);
+       
+        alert(cartt.product2);
+        
+    </script>
+</body>
+</html>

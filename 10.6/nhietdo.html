@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x = prompt("Nhập nhiệt độ: ");
+        function Temperature(doC){
+            if(doC<-273){    
+                return alert("Giá trị không phù hợp");
+            };
+            this.doC = doC;
+            this.doF = function(){
+                return this.doC*9/5+32;
+            }
+            this.doK = function(){
+                return this.doC*1 + 273.15;
+            }
+        }
+        let nhietdo = new Temperature(x);
+        document.write("Độ F: "+nhietdo.doF()+"<br>Độ Kenvin: "+nhietdo.doK());
+        
+    </script>
+</body>
+</html>

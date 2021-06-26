@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="1515px" height="700px" style="border:1px solid #d3d3d3;">
+    <script>
+        let x = prompt("Nhập chiều dài: ");
+        let y = prompt("Nhập chiều rộng: ");
+        function Rectangle(dai,rong){
+            this.dai = dai;
+            this.rong = rong;
+            this.chuvi = chuvi;
+            this.dientich = dientich;
+            this.setdai = function(dai){
+                this.dai = dai;
+            }
+            this.setrong = function(rong){
+                this.rong = rong;
+            }
+        }
+        function chuvi(){
+            return (this.dai+this.rong)*2;
+        }
+        function dientich(){
+            return this.dai*this.rong;
+        }
+        
+      
+        var canvas = document.getElementById('myCanvas'),
+        ctx = canvas.getContext('2d');
+        ctx.fillStyle = "#FF0000";
+        let text = "Chiều dài: ";
+        let hinh = new Rectangle(x,y);
+        ctx.font ="10px Arial";
+        ctx.fillRect(500,500,hinh.dai,hinh.rong);
+        ctx.fillText("Chiều dài: " + hinh.dai, 10, 50);
+        ctx.fillText("Chiều rộng: " + hinh.rong, 10, 100);
+        ctx.fillText("Chu vi: " + hinh.chuvi(), 10, 150);
+        ctx.fillText("Diện tích: " + hinh.dientich(), 10, 200);
+        
+        
+    </script>
+</body>
+</html>

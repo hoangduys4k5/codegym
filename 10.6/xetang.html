@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="500" height="500" style="border: 2px solid green;"></canvas>
+
+    <script>
+        let myCanvas = document.getElementById('myCanvas');
+        let ctx = myCanvas.getContext('2d');
+        
+        class hcn{
+            constructor(dai,rong) {
+                this.dai=dai;
+                this.rong=rong;
+                this.x = 250-this.dai/2;
+                this.y = 500-this.rong;
+                this.moveX = 0;
+                this.moveY = 2;
+            }
+            draw(ctx) {
+                ctx.fillRect(this.x,this.y,this.dai,this.rong);
+            }
+            vitri() {
+                this.x += this.moveX;
+                this.y -= this.moveY;
+            }
+            checkY() {
+                if ((this.y + this.rong) >= 500 ) {
+                    this.moveY = 2;
+                }
+
+                if ((this.y) <= 25 ) {
+                    this.moveY = -2;
+                }
+            }
+
+            len() {
+                this.moveY += 1;
+            }
+        }
+        class hcn2{
+            constructor(dai2,rong2) {
+                this.dai2=dai2;
+                this.rong2=rong2;
+                this.a = 250-this.dai2/2;
+                this.b = 500-(75);
+                this.moveA = 0;
+                this.moveB = 2;
+            }
+            draw(ctx) {
+                ctx.fillRect(this.a,this.b,this.dai2,this.rong2);
+            }
+            vitri() {
+                this.a += this.moveA;
+                this.b -= this.moveB;
+            }
+            checkY() {
+                if ((this.b) >= 500-75 ) {
+                    this.moveB = 2;
+                }
+
+                if ((this.b) <= 0 ) {
+                    this.moveB = -2;
+                }
+            }
+
+            len() {
+                this.moveB += 1;
+            }
+        }
+        let hinh = new hcn(50,50);
+        let hinh2 = new hcn2(25,25);
+        ctx.fillStyle="orange";
+        function main() {
+            ctx.clearRect(0, 0, 500, 500);
+            hinh.draw(ctx);
+            hinh2.draw(ctx);
+            hinh2.vitri();
+            hinh.vitri();
+            hinh.checkY();
+            hinh2.checkY();
+            requestAnimationFrame(main, 1000);
+        }
+        
+        
+        // hinh.draw(ctx);
+        // hinh2.draw(ctx);
+        document.addEventListener('keypress', upSpeed);
+        
+        function upSpeed(e) {
+            console.log(e)
+            switch (e.keyCode) {
+                case 56:
+                    hinh.len();
+                    hinh2.len();
+            }
+        }
+
+        main();
+    </script>
+</body>
+</html>

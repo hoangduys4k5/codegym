@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div style="border: 1px solid black;margin-right: 1200px;">
+    <h3>NOKIA</h3>
+    <button onclick="bat()">Bật</button><button onclick="tat()">Tắt</button><br>
+    <label>Pin</label><br>
+    <p id="pin">100</p><br>
+    <label>Soạn thảo tin nhắn</label><br>
+    <textarea id="soanthao" value="Soạn thảo tin nhắn"></textarea><br>
+    <button onclick="gui()">Gửi</button><br>
+    <button onclick="hopthuden();">Hộp thư đến: </button><br>
+    <p id="Hopthu" style="opacity: 0;"></p><br>
+    <button onclick="tindagui()">Tin đã gửi</button><br>
+    <p id="tindagui" style="opacity: 0;"></p><br>
+    
+    <button onclick="sac()">Sạc pin</button><br>
+</div>
+<div style="border: 1px solid black;margin-right: 1200px;">
+    <h3>IPHONE</h3>
+    <button onclick="bat1()">Bật</button><button onclick="tat1()">Tắt</button><br>
+    <label>Pin</label><br>
+    <p id="pin1">100</p><br>
+    <label>Soạn thảo tin nhắn</label><br>
+    <textarea id="soanthao1" value="Soạn thảo tin nhắn"></textarea><br>
+    <button onclick="gui1()">Gửi</button><br>
+    <button onclick="hopthuden1();">Hộp thư đến: </button><br>
+    <p id="Hopthu1" style="opacity: 0;"></p><br>
+    <button onclick="tindagui()">Tin đã gửi</button><br>
+    <p id="tindagui1" style="opacity: 0;"></p><br>
+    
+    <button onclick="sac1()">Sạc pin</button><br>
+</div>
+</body>
+    <script>
+        let get = document.getElementsByTagName("button");
+        let getpin = document.getElementById("pin");
+        let setpin = Number.parseInt(getpin.value);
+        function haopin(){
+            if(bat() || tat() || gui() || hopthuden() || tindagui()){
+               document.getElementById("pin").innerHTML = 1454;
+            };
+        }
+        haopin();
+    </script>
+</html>
