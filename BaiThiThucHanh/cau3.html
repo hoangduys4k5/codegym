@@ -24,12 +24,12 @@
         this.render = function () {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
-            
+
             ctx.fillStyle = color;
             ctx.fill();
         }
     }
-    let tron = new Circle(40,50,30,"#FF3300");
+    let tron = new Circle(40, 50, 30, "#FF3300");
     tron.render();
 
 </script>

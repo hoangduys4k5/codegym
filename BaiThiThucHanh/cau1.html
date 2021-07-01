@@ -25,15 +25,18 @@
     function printArray(arr) {
         let tarr = [];
         tarr[0] = arr[0];
+        let str = '';
         for (let i = 1; i < arr.length * 2 - 1; i += 2) {
             tarr[i] = '-';
         }
         for (let i = 2; i < arr.length * 2; i += 2) {
             tarr[i] = arr[i / 2];
         }
-        return tarr;
+        for (let i = 0; i < tarr.length; i++) {
+            str += tarr[i];
+        }
+        return str;
     }
-
     //c
     function find(value, arr) {
         let tam = -1;
@@ -48,7 +51,7 @@
     //d
     function removeAll(value, arr) {
 
-        for (let i = 0; i < arr.length ; i++) {
+        for (let i = 0; i < arr.length; i++) {
             if (value === arr[i]) {
                 arr.splice(i, 1);
             }
@@ -67,8 +70,8 @@
             let songuyen = Number(prompt("Nhap vao so nguyen can xoa: "));
             if (songuyen > 0 && Number.isInteger(songuyen)) {
                 removeAll(songuyen, arr);
-            document.write("Mang con lai: " + arr);
-           
+                document.write("Mang con lai: " + arr);
+
             } else {
                 alert("So ban nhap phai la so nguyen duong");
             }
@@ -78,7 +81,7 @@
         }
 
     }
-    
+
 
 
 </script>
